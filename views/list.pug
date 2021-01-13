@@ -1,0 +1,38 @@
+extends base
+block content
+    
+        table(border='1' class='table table-striped table-borderless')
+             
+                tr
+                th(colspan='6') EMPLOYEE LIST
+                a(href='/register') Record New Employee    
+                tr 
+                    
+                
+                    th PF #
+                    th NAME
+                    th DESIGNATION
+                    th EMAIL ADDRESS
+                    th DUTY STATION
+                    th ACTION
+                    
+                tbody
+                each lists in result
+                    tr  
+                    
+                    td #{lists.pf}
+                    td #{lists.sname}
+                    td #{lists.desig}
+                    td #{lists.email}
+                    td #{lists.station}
+                    td
+                    
+                        a(href='/register/edit/'+lists.pf) Edit
+                        |&nbsp
+                        a(href='/register/delete/'+lists.pf) DELETE
+
+
+        a(href='/register') Record New Employee         
+                    
+                
+              

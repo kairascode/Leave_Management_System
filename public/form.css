@@ -1,0 +1,32 @@
+.container{
+    height: 100%;
+    align-content: center;
+    }
+
+.form{
+    height: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(5, 1, 1, 0.829) !important;
+    /* content: ''; */
+    /* height: 100%; */
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.3); */
+    z-index: -1;
+    border-radius: 10px;
+    
+    }
+    
+    .cover{
+        background: #222 url('/public/images/bk4.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    }

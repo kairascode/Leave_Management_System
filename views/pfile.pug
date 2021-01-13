@@ -1,0 +1,23 @@
+extends base   
+block content
+    
+      table(border='1')
+                    tr
+                    th(colspan='5') #{result[0].pf} FILE
+                    tr
+                        th Name
+                        th Designation
+                        th Station
+                        th # of Leave Days
+                        th Action
+                    tbody
+                    each rs in result
+                        tr
+                            td #{rs.sname}
+                            td #{rs.desig}
+                            td #{rs.sid}
+                            td #{rs.days}
+                            td
+                
+                                a(href='/leave/edit/') Execute
+                                

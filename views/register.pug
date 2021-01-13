@@ -1,0 +1,29 @@
+extends base
+block content
+  body
+   div.container
+    h4 REGISTER STAFF HERE
+    p #{email}
+    form.form-group(method='POST' action='/register')
+      
+        p Name
+            input.form-control.col-md-6(type='text', name='sname', value='', required)
+        p GENDER
+            select.form-control.col-md-6(name="gender",required)
+                          option(value='')   
+                          option(value='male') Male
+                          option(value='female') Female
+        p PF number
+            input.form-control.col-md-6(type='text', name='pf', value='',required, max-length='10')
+        p Designation
+            input.form-control.col-md-6(type='text', name='desig', value='', required)
+        p Email
+            input.form-control.col-md-6(type='email', name='email', value='', required)
+        p Station
+            input.form-control.col-md-6(type='text', name='station', value='', required)
+
+        input.btn.btn-success(type='submit',name='submit', value='REGISTER', required)
+
+    
+     
+           

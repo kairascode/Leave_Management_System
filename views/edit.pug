@@ -1,0 +1,21 @@
+extends base
+block content
+ body
+  for posts in result
+    div.container
+      .col-md-12
+        form.form-group(method='POST' action='/register/update')
+          h4 EDIT STAFF DETAILS
+            input.form-control.col-md-6(type='hidden', name='sid', value=posts.sid, readonly)
+            p Name
+            input.form-control.col-md-6(type='text', name='sname', value=posts.sname, readOnly)
+            p PF number
+            input.form-control.col-md-6(type='number', name='pf', value=posts.pf,readOnly)
+            p Designation
+            input.form-control.col-md-6(type='text', name='desig', value=posts.desig)
+            p Email
+            input.form-control.col-md-6(type='email', name='email', value=posts.email)
+            p Station
+            input.form-control.col-md-6(type='text', name='station', value=posts.station)
+            p
+            input.btn.btn-success(type='submit',name='submit', value='SAVE')

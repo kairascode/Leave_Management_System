@@ -1,0 +1,51 @@
+extends base
+block content
+ body
+  for posts in result
+    div
+      .container
+        .row
+          .col-md-12
+            .well.well-sm
+             .form
+                form.form-horizontal(method='POST' action='/leave/calc')
+
+                    h4 LEAVE APPLICATION FORM
+                    fieldset.scheduler-border.col-md-8
+                        div.class-row
+                            legend Staff Profile
+                            input(type='hidden', name='sid', value=posts.sid, readonly)
+                            label Station
+                            input.form-control(type='text', name='station', value=posts.station, readOnly)
+                            label Name
+                            input.form-control(type='text', name='sname', value=posts.sname, readOnly)
+                            label PF number
+                            input.form-control(type='text', name='pf', value=posts.pf, readOnly)
+                            label Designation
+                            input.form-control(type='text', name='desig', value=posts.desig, readOnly)
+                        
+                    fieldset.scheduler-border.col-md-8
+                        div.class-row
+                        legend  Process leave here
+                        p #{message}
+                        label Select Leave type
+                        select.form-control.input(name="leavetyp", id='leavetyp',required)
+                          option(value='')   
+                          option(value='annual_leave') Annual(45 Days)
+                          option(value='paternity_leave') Paternity(15 days)
+                          option(value='maternity_leave') Maternity(90 days)
+                          option(value='sick_leave') Sick Leave(60 days)
+                          option(value='terminal_leave') Terminal (30 days)
+                        
+                        label Contact Phone #
+                        input.form-control(type='text', name='address', required)
+                        label To Start Leave on::
+                        input.form-control(type='date', name='startsOn', required)
+                        label Leave to end on::
+                        input.form-control(type='date', name='endsOn', required)
+                      
+                        label Date Leave Applied::
+                        input.form-control(type='date', name='dApplied', required)
+                        p
+                        input.col-mid-10.btn.btn-success(type='submit',name='submit', value='Apply')
+                    

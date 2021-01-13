@@ -1,0 +1,18 @@
+extends base
+block content
+  body
+   div.container
+        .col-md-12
+            form.form-group-horizontal(method='POST' action='/email')
+            
+                p Email
+                    input.form-control(type='email',class='form-control', name='email', required )
+                p Subject
+                    input.form-control(type='text',class='form-control', name='subject',required, max-length='10')
+                p Message
+                    input.form-control(type='text', class='form-control',name='message', value='', required)
+                p
+                    input.btn.btn-success(type='submit',name='submit', value='Send')
+
+            
+            

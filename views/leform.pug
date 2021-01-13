@@ -1,0 +1,20 @@
+extends base
+
+block content
+
+    body
+        div
+            .container    
+                .row
+                    .col-md-12
+                        .well.well-sm
+                            h4 Retrieve Personal file 
+                            p #{message}
+                            form.form-group(method='POST' action='/leave')
+                            
+                                label Pf Number
+                                    input.form-control(type='text', name='pf', value='', required)
+                                p
+                                input.btn.btn-success(type='submit',name='submit', btn.btn-primary-success, value='Retrieve')
+                    
+                    

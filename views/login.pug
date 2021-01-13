@@ -1,0 +1,40 @@
+title LEAVE MANAGEMENT SYSTEM
+
+link(
+     rel="stylesheet"
+      href="/public/dist/css/bootstrap.css"
+    )
+link(
+     rel="stylesheet"
+      href="/public/kaiawesome/css/all.css"
+    )
+
+link(rel='stylesheet' type='text/css' href="/public/login.css")
+.container
+  .d-flex.justify-content-center.h-100
+    .card
+      .card-header
+        h3 Leave Management System(LeMaSy)-Sign in
+       
+      .card-body
+        form(method="POST" action="/log")
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fas.fa-envelope
+            input.form-control(type='email' placeholder='Email' name='logger' required)
+          .input-group.form-group
+            .input-group-prepend
+              span.input-group-text
+                i.fas.fa-key
+            input.form-control(type='password' placeholder='password' name='accode' required)
+          
+          .form-group
+            input.btn.float-right.login_btn(type='submit' value='Login')
+      .card-footer
+        .d-flex.justify-content-center.links
+          | Don&apos;t have an account?
+          a(href='/reg') Sign Up
+        .d-flex.justify-content-center
+          a(href='#') Forgot your password?
+

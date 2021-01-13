@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/favicon.ico')
+    title LEAVE MANAGEMENT SYSTEM
+    script(src="/public/jquery.min.js")
+    script(src="/public/dist/js/bootstrap.min.js")
+    link(
+     rel="stylesheet"
+      href="/public/dist/css/bootstrap.css"
+    )
+    link(
+     rel="stylesheet"
+      href="/public/index.css"
+    )
+    link(
+     rel="stylesheet"
+      href="/public/kaiawesome/css/all.css"
+    )
+    
+    link(href='/navbar-top.css', rel='stylesheet')
+  
+    
+  body
+
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
+      a.navbar-brand(href='#') LEAVE MANAGEMENT SYSTEM  
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarCollapse.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='/home')
+                i.fa.fa-suitcase Home 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/register/list') 
+                i.fa.fa-address-card My Employees
+            li.nav-item
+              a.nav-link(href='/leave') 
+                i.fa.fa-calendar Apply for Leave
+            li.nav-item
+              a.nav-link(href='/email')
+                i.fa.fa-envelope-square Email
+        
+            li.nav-item.dropdown
+        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+             i.fa.fa-user  #{prof}
+        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+          
+          a.dropdown-item(href='/home/logout')
+           i.fa.fa-key logout
+          
+      
+          
+  block content
+      
+
+   
